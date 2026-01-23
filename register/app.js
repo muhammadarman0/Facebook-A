@@ -7,7 +7,7 @@ let emailUser = document.getElementById("email")
 let pass = document.getElementById("password")
 let gend = document.getElementsByName("Gender")
 
-let users = []
+// let users = []
 
 
 // console.log(months);
@@ -28,7 +28,7 @@ function saveLocalStorage(e) {
         errorAlert("fill the fild")
         return;
     }
-    if (pass.value.length <= 8) {
+    if (pass.value.length < 8) {
         errorAlert("Password at least 8 character!")
         return;
     }
@@ -51,11 +51,11 @@ function saveLocalStorage(e) {
         }
     }
 
-    // let userFormDB = JSON.parse(localStorage.getItem("users"))
+    let userFormDB = JSON.parse(localStorage.getItem("users")) || []
 
-    users.push(objArr)
+    userFormDB.push(objArr)
 
-    localStorage.setItem("users", JSON.stringify(users))
+    localStorage.setItem("users", JSON.stringify(userFormDB))
 
     first.value = ""
     last.value = ""
@@ -66,5 +66,7 @@ function saveLocalStorage(e) {
         title: "Congratulations! signup successfully!",
         icon: "success",
         draggable: true
+    }).then(() => {
+        window.location.href = "../login/login.html";
     });
 }
