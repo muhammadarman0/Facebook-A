@@ -19,6 +19,8 @@ function loginForm() {
     }
 
     let userFormDB = JSON.parse(localStorage.getItem("users")) || []
+    
+    console.log(userFormDB);
 
     let account = false
     for (let i = 0; i < userFormDB.length; i++) {
