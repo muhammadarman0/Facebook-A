@@ -1,0 +1,290 @@
+@import url("../global.css");
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f4f7;
+}
+
+.dashboard-header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0px 15px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.header-left .search-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #eeeeee;
+    padding-left: 8px;
+    border-radius: 25px;
+}
+
+.header-left .search-input>input {
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.header-left .search-input i {
+    color: gray;
+}
+
+.header-left>img {
+    width: 50px;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-center>div {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header-center>div:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.header-center>div>i {
+    font-size: 20px;
+    color: rgb(132, 132, 132);
+}
+
+.header-center>div:first-child {
+    border-bottom: 3px solid #0866ff;
+    border-radius: 0px;
+    height: 100%;
+}
+
+.header-center>div:first-child:hover {
+    background-color: white;
+}
+
+.header-center>div:first-child>i {
+    color: #0866ff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.header-right .header-right-icons,
+.header-right .user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right .header-right-icons>i {
+    font-size: 20px;
+}
+
+.header-right>button {
+    height: 40px;
+    padding: 0px 15px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+}
+
+.header-right .user-profile {
+    border: 1px solid gray;
+    position: relative;
+}
+
+.header-right .user-profile .profile-arrow {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-color: rgb(183, 183, 183);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
+
+.header-right .user-profile .profile-arrow>i {
+    font-size: 12px;
+}
+
+
+.parent-slider {
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 10px;
+    width: 100%;
+}
+
+.left-slider {
+    flex: 1;
+    height: 100%;
+}
+
+.center-slider {
+    flex: 2;
+    /* display: flex; */
+}
+
+.right-slider {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.user-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.user-pic>img {
+    border-radius: 50%;
+}
+
+.search-btn>button {
+    height: 40px;
+    width: 452px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    background-color: #F0F2F5;
+    color: #73767A;
+    font-size: 18px;
+}
+
+.search-btn>button:hover {
+    background-color: #dddfe2;
+
+}
+
+.create-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.video,
+.picture,
+.emoji {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.video,
+.picture,
+.emoji>i {
+    font-size: 20px;
+}
+
+.fa-video {
+    color: #F02849;
+}
+
+.fa-images {
+    color: #45BD62;
+}
+
+.fa-face-grin {
+    color: #F7B928;
+}
+
+.video:hover,
+.picture:hover,
+.emoji:hover {
+    background-color: #e0e8f3;
+    cursor: pointer;
+
+}
+
+.create-story {
+    display: flex;
+    gap: 10px;
+}
+
+.create-story>.contain-stories {
+    /* background-color: red; */
+    height: 200px;
+    width: 120px;
+    min-width: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    margin-top: 10px;
+    background-position: center;
+    cursor: pointer;
+}
+.profile-pic {
+    height: 40px;
+    width: 40px;
+    border: 4px solid #075CE5;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.contain-stories>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.create-story>.contain-stories>.story-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    background: linear-gradient(to top, #000, #00000000);
+    width: 100%;
+}
