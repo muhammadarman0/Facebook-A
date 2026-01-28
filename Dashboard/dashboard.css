@@ -264,6 +264,7 @@
     background-position: center;
     cursor: pointer;
 }
+
 .profile-pic {
     height: 40px;
     width: 40px;
@@ -278,7 +279,9 @@
     height: 100%;
 }
 
-.create-story>.contain-stories>.story-text {
+/* .create-story>.contain-stories>.story-text {} */
+
+.story-text {
     position: absolute;
     bottom: 0;
     left: 0;
