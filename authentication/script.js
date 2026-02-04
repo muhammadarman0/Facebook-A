@@ -1,5 +1,5 @@
 const userDetail = JSON.parse(localStorage.getItem("currentUser"))
 
-if (!userData) {
+if (!userDetail) {
     window.location.href = "../login/login.html"
 }
