@@ -54,22 +54,44 @@ let ArrOfStories = [
 
 const storyContainer = document.getElementById("story-container");
 
-const createStoryHTML = () => {
-    for (let i = 0; i < ArrOfStories.length; i++) {
-        const story = ArrOfStories[i];
-        const storyHTML = ` <div class="story"
-                            style="background-image: url(${story.storyFile});">
+// const createStoryHTML = () => {
+//     for (let i = 0; i < ArrOfStories.length; i++) {
+//         const story = ArrOfStories[i];
+//         const storyHTML = ` <div class="story"
+//                             style="background-image: url(${story.storyFile});">
 
-                            <div class="profile-pic">
-                                <img src="${story.profilePic}"
-                                    alt="">
-                            </div>
+//                             <div class="profile-pic">
+//                                 <img src="${story.profilePic}"
+//                                     alt="">
+//                             </div>
 
-                            <div class="story-content">
-                                <p>${story.fullName}</p>
-                            </div>
-                        </div>`;
+//                             <div class="story-content">
+//                                 <p>${story.UserName}</p>
+//                             </div>
+//                         </div>`;
 
-        storyContainer.innerHTML += storyHTML;
-    }
-};
+//         storyContainer.innerHTML += storyHTML;
+//     }
+// };
+
+// createStoryHTML()
+
+
+const postStory = () => {
+
+    const returnArr = ArrOfStories.map((story,index) => {
+        return ` <div class="story"
+                           style="background-image: url(${story.storyFile});">
+                           <div class="profile-pic">
+                               <img src="${story.profilePic}"
+                                   alt="">
+                           </div>
+                           <div class="story-content">
+                               <p>${story.UserName}</p>
+                           </div>
+                       </div>`
+    })
+    storyContainer.innerHTML = returnArr.join("")
+
+}
+postStory()
