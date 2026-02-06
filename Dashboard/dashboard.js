@@ -221,7 +221,7 @@ const uploadVideo = () => {
                                 </div>
                                 <div class="post-icons">
                                     <i class="fa-solid fa-ellipsis"></i>
-                                    <i class="fa-solid fa-xmark"></i>
+                                    <i class="fa-solid fa-xmark" onclick="re(this)"></i>
                                 </div>
                             </div>
                             <div class="post-caption">
@@ -258,3 +258,11 @@ const uploadVideo = () => {
 }
 
 uploadVideo()
+
+// function re(e) {
+//     e.childNodes[0].childNodes;
+//     console.log(e);
+    
+// }
+
+// let re = document.getElementById("remove")
