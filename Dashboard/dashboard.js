@@ -1,51 +1,75 @@
-const storyArray = [
+
+let ArrOfStories = [
     {
-        fullname: "Muhammad Arman",
-        profilePic: "https://i.pravatar.cc/100?img=1",
-        storyImg: "https://picsum.photos/300/500?random=1"
+        storyFile: "https://picsum.photos/300/500?random=1",
+        profilePic: "https://i.pravatar.cc/150?img=1",
+        UserName: "Ali",
     },
     {
-        fullname: "Ali Khan",
-        profilePic: "https://i.pravatar.cc/100?img=2",
-        storyImg: "https://picsum.photos/300/500?random=2"
+        storyFile: "https://picsum.photos/300/500?random=2",
+        profilePic: "https://i.pravatar.cc/150?img=2",
+        UserName: "Ahmed",
     },
     {
-        fullname: "Sara Ahmed",
-        profilePic: "https://i.pravatar.cc/100?img=3",
-        storyImg: "https://picsum.photos/300/500?random=3"
-    }, {
-        fullname: "Zain Malik",
-        profilePic: "https://i.pravatar.cc/100?img=10",
-        storyImg: "https://picsum.photos/300/500?random=10"
+        storyFile: "https://picsum.photos/300/500?random=3",
+        profilePic: "https://i.pravatar.cc/150?img=3",
+        UserName: "Usman",
     },
     {
-        fullname: "Hira Shah",
-        profilePic: "https://i.pravatar.cc/100?img=11",
-        storyImg: "https://picsum.photos/300/500?random=11"
+        storyFile: "https://picsum.photos/300/500?random=4",
+        profilePic: "https://i.pravatar.cc/150?img=4",
+        UserName: "Hamza",
+    },
+    {
+        storyFile: "https://picsum.photos/300/500?random=5",
+        profilePic: "https://i.pravatar.cc/150?img=5",
+        UserName: "Bilal",
+    },
+    {
+        storyFile: "https://picsum.photos/300/500?random=6",
+        profilePic: "https://i.pravatar.cc/150?img=6",
+        UserName: "Zain",
+    },
+    {
+        storyFile: "https://picsum.photos/300/500?random=7",
+        profilePic: "https://i.pravatar.cc/150?img=7",
+        UserName: "Ayan",
+    },
+    {
+        storyFile: "https://picsum.photos/300/500?random=8",
+        profilePic: "https://i.pravatar.cc/150?img=8",
+        UserName: "Hassan",
+    },
+    {
+        storyFile: "https://picsum.photos/300/500?random=9",
+        profilePic: "https://i.pravatar.cc/150?img=9",
+        UserName: "Daniyal",
+    },
+    {
+        storyFile: "https://picsum.photos/300/500?random=10",
+        profilePic: "https://i.pravatar.cc/150?img=10",
+        UserName: "Saad",
     },
 ];
 
-console.log(storyArray);
+const storyContainer = document.getElementById("story-container");
 
-let storyCont = document.getElementById("story-items")
+const createStoryHTML = () => {
+    for (let i = 0; i < ArrOfStories.length; i++) {
+        const story = ArrOfStories[i];
+        const storyHTML = ` <div class="story"
+                            style="background-image: url(${story.storyFile});">
 
-
-
-for (let i = 0; i < storyArray.length; i++) {
-    const storyItmes = () => {
-        const story = storyArray[i]
-
-        let itemsAddStoryAnother = `  <div class="contain-stories"
-                            style="background-image: url(${story.storyImg});">
                             <div class="profile-pic">
                                 <img src="${story.profilePic}"
                                     alt="">
-                                <div class="story-text">
-                                    <p>${story.fullname}</p>
-                                </div>
                             </div>
-                        </div>`
-        storyCont.innerHTML += itemsAddStoryAnother
+
+                            <div class="story-content">
+                                <p>${story.fullName}</p>
+                            </div>
+                        </div>`;
+
+        storyContainer.innerHTML += storyHTML;
     }
-    storyItmes()
-}
+};
