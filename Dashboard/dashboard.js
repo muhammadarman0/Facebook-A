@@ -168,6 +168,11 @@ const getDataName = () => {
     `
 }
 getDataName()
+
+function logOut() {
+    const logOutUser = localStorage.removeItem("currentUser")
+    window.location.href = "../login/login.html"
+}
 const storyContainer = document.getElementById("story-container");
 
 // const createStoryHTML = () => {
