@@ -259,10 +259,8 @@ const uploadVideo = () => {
 
 uploadVideo()
 
-// function re(e) {
-//     e.childNodes[0].childNodes;
-//     console.log(e);
-    
-// }
+function re(e) {
+    console.log(e);
+}
 
 // let re = document.getElementById("remove")
