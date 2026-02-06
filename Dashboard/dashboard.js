@@ -155,9 +155,19 @@ const postVideos = [
 ];
 
 
-// console.log(postVideos);
+let localFirst = document.getElementById("userName")
+// let localLast = document.getElementById("localNameLast")
+
+let getData = JSON.parse(localStorage.getItem("currentUser"))
+console.log(getData);
 
 
+const getDataName = () => {
+    localFirst.innerHTML = `
+                    <p id="userName">${getData.name} ${getData.lastNaam}</p>
+    `
+}
+getDataName()
 const storyContainer = document.getElementById("story-container");
 
 // const createStoryHTML = () => {
@@ -259,8 +269,5 @@ const uploadVideo = () => {
 
 uploadVideo()
 
-function re(e) {
-    console.log(e);
-}
 
 // let re = document.getElementById("remove")
