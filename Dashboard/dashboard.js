@@ -155,18 +155,19 @@ const postVideos = [
 ];
 
 
-let localFirst = document.getElementById("userName")
 // let localLast = document.getElementById("localNameLast")
 
-let getData = JSON.parse(localStorage.getItem("currentUser"))
 
 
 const getDataName = () => {
+    let localFirst = document.getElementById("userName")
+
+    let getData = JSON.parse(localStorage.getItem("currentUser"))
+
     localFirst.innerHTML = `
-                    <p id="userName">${getData.name} ${getData.lastNaam}</p>
+                   ${getData.name} ${getData.lastNaam}
     `
 }
-getDataName()
 
 function logOut() {
     const logOutUser = localStorage.removeItem("currentUser")
@@ -328,7 +329,20 @@ const uploadVideo = () => {
 uploadVideo()
 
 
-// let re = document.getElementById("remove")
+let closeCreate = document.getElementById("close")
+const closeHide = document.getElementById("show-hide")
 
+closeCreate.addEventListener("click", () => {
+    closeHide.style.display = "none"
+})
+
+const createVideo = document.getElementById("createVideo")
+
+createVideo.addEventListener("click", () => {
+    closeHide.style.display = "flex"
+})
 
 // arman24101894@gmail.com
+
+
+getDataName()
