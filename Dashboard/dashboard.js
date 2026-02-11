@@ -159,7 +159,6 @@ let localFirst = document.getElementById("userName")
 // let localLast = document.getElementById("localNameLast")
 
 let getData = JSON.parse(localStorage.getItem("currentUser"))
-console.log(getData);
 
 
 const getDataName = () => {
@@ -218,61 +217,118 @@ const postStory = () => {
 postStory()
 
 
+
+// const uploadVideo = () => {
+//     for (let i = 0; i < postVideos.length; i++) {
+//         let post = postVideos[i]
+//         const postHTML = ` <div class="post">
+//                             <div class="post-header">
+//                                 <div class="profile-content">
+//                                     <div class="profile-pic">
+//                                         <img src="${post.profilePic}" alt="">
+//                                     </div>
+//                                     <div class="post-user-detail">
+//                                         <p id="name">${post.userName}</p>
+//                                         <p>${post.uploadTime}</p>
+//                                     </div>
+//                                 </div>
+//                                 <div class="post-icons">
+//                                     <i class="fa-solid fa-ellipsis"></i>
+//                                     <i class="fa-solid fa-xmark" onclick="re(this)"></i>
+//                                 </div>
+//                             </div>
+//                             <div class="post-caption">
+//                                 <p>${post.description}</p>
+//                             </div>
+//                             <div class="post-image">
+//                                 <img src="${post.uploadVideo}" alt="">
+//                             </div>
+//                             <div class="post-reactions">
+//                                 <div>
+//                                     <i class="fa-solid fa-thumbs-up"></i>
+//                                     <i class="fa-regular fa-face-grin-beam-sweat"></i>
+//                                     <p>${post.reaction}</p>
+//                                 </div>
+//                                 <div>
+//                                     <p>${post.comment} comments</p>
+//                                     <p>${post.share} share</p>
+//                                 </div>
+//                             </div>
+//                             <div class="post-footer">
+//                                 <div>
+//                                     <i class="fa-regular fa-thumbs-up"></i> Like
+//                                 </div>
+//                                 <div>
+//                                     <i class="fa-regular fa-comment"></i> Comment
+//                                 </div>
+//                                 <div>
+//                                     <i class="fa-regular fa-share-from-square"></i> Share
+//                                 </div>
+//                             </div>
+//                         </div> --> `
+//         postID.innerHTML += postHTML
+//     }
+// }
+
 const postID = document.getElementById("post-container")
 
 const uploadVideo = () => {
-    for (let i = 0; i < postVideos.length; i++) {
-        let post = postVideos[i]
-        const postHTML = ` <div class="post">
-                            <div class="post-header">
-                                <div class="profile-content">
-                                    <div class="profile-pic">
-                                        <img src="${post.profilePic}" alt="">
-                                    </div>
-                                    <div class="post-user-detail">
-                                        <p id="name">${post.userName}</p>
-                                        <p>${post.uploadTime}</p>
-                                    </div>
-                                </div>
-                                <div class="post-icons">
-                                    <i class="fa-solid fa-ellipsis"></i>
-                                    <i class="fa-solid fa-xmark" onclick="re(this)"></i>
-                                </div>
-                            </div>
-                            <div class="post-caption">
-                                <p>${post.description}</p>
-                            </div>
-                            <div class="post-image">
-                                <img src="${post.uploadVideo}" alt="">
-                            </div>
-                            <div class="post-reactions">
-                                <div>
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <i class="fa-regular fa-face-grin-beam-sweat"></i>
-                                    <p>${post.reaction}</p>
-                                </div>
-                                <div>
-                                    <p>${post.comment} comments</p>
-                                    <p>${post.share} share</p>
-                                </div>
-                            </div>
-                            <div class="post-footer">
-                                <div>
-                                    <i class="fa-regular fa-thumbs-up"></i> Like
-                                </div>
-                                <div>
-                                    <i class="fa-regular fa-comment"></i> Comment
-                                </div>
-                                <div>
-                                    <i class="fa-regular fa-share-from-square"></i> Share
-                                </div>
-                            </div>
-                        </div> --> `
-        postID.innerHTML += postHTML
-    }
+    const returnArr = postVideos.map((post) => {
+        return `
+        <div class="post">
+                             <div class="post-header">
+                                 <div class="profile-content">
+                                     <div class="profile-pic">
+                                         <img src="${post.profilePic}" alt="">
+                                     </div>
+                                     <div class="post-user-detail">
+                                         <p id="name">${post.userName}</p>
+                                         <p>${post.uploadTime}</p>
+                                     </div>
+                                 </div>
+                                 <div class="post-icons">
+                                     <i class="fa-solid fa-ellipsis"></i>
+                                     <i class="fa-solid fa-xmark" onclick="re(this)"></i>
+                                 </div>
+                             </div>
+                             <div class="post-caption">
+                                 <p>${post.description}</p>
+                             </div>
+                             <div class="post-image">
+                                 <img src="${post.uploadVideo}" alt="">
+                             </div>
+                             <div class="post-reactions">
+                                 <div>
+                                     <i class="fa-solid fa-thumbs-up"></i>
+                                     <i class="fa-regular fa-face-grin-beam-sweat"></i>
+                                     <p>${post.reaction}</p>
+                                 </div>
+                                 <div>
+                                     <p>${post.comment} comments</p>
+                                     <p>${post.share} share</p>
+                                 </div>
+                             </div>
+                             <div class="post-footer">
+                                 <div>
+                                     <i class="fa-regular fa-thumbs-up"></i> Like
+                                 </div>
+                                 <div>
+                                     <i class="fa-regular fa-comment"></i> Comment
+                                 </div>
+                                 <div>
+                                     <i class="fa-regular fa-share-from-square"></i> Share
+                                 </div>
+                             </div>
+                         </div> 
+        `
+    })
+    postID.innerHTML = returnArr.join("")
 }
 
 uploadVideo()
 
 
 // let re = document.getElementById("remove")
+
+
+// arman24101894@gmail.com
