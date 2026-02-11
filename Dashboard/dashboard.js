@@ -51,108 +51,108 @@ let ArrOfStories = [
         UserName: "Saad",
     },
 ];
-const postVideos = [
-    {
-        profilePic: "https://i.pravatar.cc/150?img=1",
-        userName: "Ali",
-        uploadTime: "2h",
-        description: "Aaj ka vlog 💙",
-        uploadVideo: "https://picsum.photos/400/600?random=1",
-        reaction: 120,
-        comment: 35,
-        share: 10,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=2",
-        userName: "Ahmed",
-        uploadTime: "4h",
-        description: "Coding grind 🔥",
-        uploadVideo: "https://picsum.photos/400/600?random=2",
-        reaction: 89,
-        comment: 22,
-        share: 6,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=3",
-        userName: "Usman",
-        uploadTime: "6h",
-        description: "Evening vibes 🌇",
-        uploadVideo: "https://picsum.photos/400/600?random=3",
-        reaction: 200,
-        comment: 50,
-        share: 18,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=4",
-        userName: "Hamza",
-        uploadTime: "1d",
-        description: "Gym time 💪",
-        uploadVideo: "https://picsum.photos/400/600?random=4",
-        reaction: 310,
-        comment: 72,
-        share: 40,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=5",
-        userName: "Bilal",
-        uploadTime: "1d",
-        description: "Road trip 🚗",
-        uploadVideo: "https://picsum.photos/400/600?random=5",
-        reaction: 145,
-        comment: 28,
-        share: 12,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=6",
-        userName: "Zain",
-        uploadTime: "2d",
-        description: "Chill day 😌",
-        uploadVideo: "https://picsum.photos/400/600?random=6",
-        reaction: 76,
-        comment: 14,
-        share: 4,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=7",
-        userName: "Ayan",
-        uploadTime: "2d",
-        description: "Learning JS 🚀",
-        uploadVideo: "https://picsum.photos/400/600?random=7",
-        reaction: 98,
-        comment: 19,
-        share: 7,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=8",
-        userName: "Hassan",
-        uploadTime: "3d",
-        description: "Sunset view 🌅",
-        uploadVideo: "https://picsum.photos/400/600?random=8",
-        reaction: 260,
-        comment: 60,
-        share: 25,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=9",
-        userName: "Daniyal",
-        uploadTime: "3d",
-        description: "Street food 😋",
-        uploadVideo: "https://picsum.photos/400/600?random=9",
-        reaction: 180,
-        comment: 44,
-        share: 20,
-    },
-    {
-        profilePic: "https://i.pravatar.cc/150?img=10",
-        userName: "Saad",
-        uploadTime: "4d",
-        description: "Weekend fun 🎉",
-        uploadVideo: "https://picsum.photos/400/600?random=10",
-        reaction: 95,
-        comment: 16,
-        share: 5,
-    },
-];
+// const postVideos = [
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=1",
+//         userName: "Ali",
+//         uploadTime: "2h",
+//         description: "Aaj ka vlog 💙",
+//         uploadVideo: "https://picsum.photos/400/600?random=1",
+//         reaction: 120,
+//         comment: 35,
+//         share: 10,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=2",
+//         userName: "Ahmed",
+//         uploadTime: "4h",
+//         description: "Coding grind 🔥",
+//         uploadVideo: "https://picsum.photos/400/600?random=2",
+//         reaction: 89,
+//         comment: 22,
+//         share: 6,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=3",
+//         userName: "Usman",
+//         uploadTime: "6h",
+//         description: "Evening vibes 🌇",
+//         uploadVideo: "https://picsum.photos/400/600?random=3",
+//         reaction: 200,
+//         comment: 50,
+//         share: 18,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=4",
+//         userName: "Hamza",
+//         uploadTime: "1d",
+//         description: "Gym time 💪",
+//         uploadVideo: "https://picsum.photos/400/600?random=4",
+//         reaction: 310,
+//         comment: 72,
+//         share: 40,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=5",
+//         userName: "Bilal",
+//         uploadTime: "1d",
+//         description: "Road trip 🚗",
+//         uploadVideo: "https://picsum.photos/400/600?random=5",
+//         reaction: 145,
+//         comment: 28,
+//         share: 12,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=6",
+//         userName: "Zain",
+//         uploadTime: "2d",
+//         description: "Chill day 😌",
+//         uploadVideo: "https://picsum.photos/400/600?random=6",
+//         reaction: 76,
+//         comment: 14,
+//         share: 4,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=7",
+//         userName: "Ayan",
+//         uploadTime: "2d",
+//         description: "Learning JS 🚀",
+//         uploadVideo: "https://picsum.photos/400/600?random=7",
+//         reaction: 98,
+//         comment: 19,
+//         share: 7,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=8",
+//         userName: "Hassan",
+//         uploadTime: "3d",
+//         description: "Sunset view 🌅",
+//         uploadVideo: "https://picsum.photos/400/600?random=8",
+//         reaction: 260,
+//         comment: 60,
+//         share: 25,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=9",
+//         userName: "Daniyal",
+//         uploadTime: "3d",
+//         description: "Street food 😋",
+//         uploadVideo: "https://picsum.photos/400/600?random=9",
+//         reaction: 180,
+//         comment: 44,
+//         share: 20,
+//     },
+//     {
+//         profilePic: "https://i.pravatar.cc/150?img=10",
+//         userName: "Saad",
+//         uploadTime: "4d",
+//         description: "Weekend fun 🎉",
+//         uploadVideo: "https://picsum.photos/400/600?random=10",
+//         reaction: 95,
+//         comment: 16,
+//         share: 5,
+//     },
+// ];
 
 
 // let localLast = document.getElementById("localNameLast")
@@ -168,6 +168,9 @@ const getDataName = () => {
                    ${getData.name} ${getData.lastNaam}
     `
 }
+
+getDataName()
+
 
 function logOut() {
     const logOutUser = localStorage.removeItem("currentUser")
@@ -274,7 +277,8 @@ postStory()
 const postID = document.getElementById("post-container")
 
 const uploadVideo = () => {
-    const returnArr = postVideos.map((post) => {
+    const postWaleLog = JSON.parse(localStorage.getItem("postsVideos"))
+    const returnArr = postWaleLog?.map((post) => {
         return `
         <div class="post">
                              <div class="post-header">
@@ -323,12 +327,22 @@ const uploadVideo = () => {
                          </div> 
         `
     })
-    postID.innerHTML = returnArr.join("")
+    postID.innerHTML = returnArr ? returnArr.join("") : "";
 }
 
 uploadVideo()
 
+const createrName = () => {
+    let localFirst = document.getElementById("Name")
 
+    let getData = JSON.parse(localStorage.getItem("currentUser"))
+
+    localFirst.innerHTML = `
+                   ${getData.name} ${getData.lastNaam}
+    `
+}
+
+createrName()
 let closeCreate = document.getElementById("close")
 const closeHide = document.getElementById("show-hide")
 
@@ -344,5 +358,36 @@ createVideo.addEventListener("click", () => {
 
 // arman24101894@gmail.com
 
+const createPostForm = document.getElementById("show-hide")
+createPostForm.addEventListener("submit", (e) => fullInputAndPostVideo(e));
 
-getDataName()
+const fullInputAndPostVideo = (e) => {
+    e.preventDefault();
+    let caption = document.getElementById("desription")
+    let imgUrl = document.getElementById("img-url")
+    let user = JSON.parse(localStorage.getItem("currentUser"))
+    const posts = JSON.parse(localStorage.getItem("postsVideos")) || []
+    const newPost =
+    {
+        profilePic: "https://i.pravatar.cc/150?img=1",
+        userName: `${user.name} ${user.lastNaam}`,
+        uploadTime: "2h",
+        description: caption.value,
+        uploadVideo: imgUrl.value,
+        reaction: 0,
+        comment: 0,
+        share: 0,
+    }
+
+    posts.unshift(newPost)
+
+    localStorage.setItem("postsVideos", JSON.stringify(posts))
+
+    uploadVideo()
+    closeHide.style.display = "none"
+
+    caption.value = ""
+    imgUrl.value = ""
+}
+
+
