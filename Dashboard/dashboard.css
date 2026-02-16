@@ -175,6 +175,12 @@
     width: 300px;
 }
 
+/* .center-layout {
+    overflow-y: sc;
+    overflow-x: hidden;
+    min-height: 300vh;
+} */
+
 .main>.center-layout {
     flex: 1;
     display: flex;
