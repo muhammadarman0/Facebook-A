@@ -1,4 +1,5 @@
-
+let showLogOut = document.getElementById("show-log-out")
+let newOut = document.getElementById("log-out-show-click")
 let ArrOfStories = [
     {
         storyFile: "https://picsum.photos/300/500?random=1",
@@ -172,6 +173,13 @@ const getDataName = () => {
 getDataName()
 
 
+showLogOut.addEventListener("click", () => {
+    if (newOut.style.display === "none") {
+        newOut.style.display = "block"
+    } else {
+        newOut.style.display = "none"
+    }
+})
 function logOut() {
     const logOutUser = localStorage.removeItem("currentUser")
     window.location.href = "../login/login.html"
@@ -390,4 +398,12 @@ const fullInputAndPostVideo = (e) => {
     imgUrl.value = ""
 }
 
+const nameuser = () => {
+    const name = document.getElementById("Nameuser")
+    let getData = JSON.parse(localStorage.getItem("currentUser"))
+    name.innerHTML = `${getData.name} ${getData.lastNaam}`
+    
+}
+
+nameuser()
 

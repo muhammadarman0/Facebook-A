@@ -51,7 +51,7 @@
                     <i class="fa-solid fa-bell"></i>
                 </div>
 
-                <div class="user-profile">
+                <div id="show-log-out" class="user-profile">
                     <i class="fa-regular fa-user"></i>
 
                     <div class="profile-arrow">
@@ -198,11 +198,11 @@
         </form>
     </div>
 
-    <div class="log-out-cont">
+    <div class="log-out-cont" id="log-out-show-click">
         <div class="first-lineCont">
             <div class="profile-pic">
                 <i class="fa-regular fa-user"></i>
-                <span id="Name">Muhammad Arman</span>
+                <span id="Nameuser"></span>
                 <div class="see-porifle">
                     <button>
                         <i class="fa-regular fa-user"></i>
@@ -213,15 +213,19 @@
             <div class="privacy">
                 <div class="private-logo">
                     <i class="fa-solid fa-shield-halved"></i>
+                    <p>Setting & Privacy</p>
                 </div>
                 <div class="question-logo">
                     <i class="fa-solid fa-question"></i>
+                    <p>Help & Support</p>
                 </div>
-                <div class="question-logo">
+                <div class="moon-logo">
                     <i class="fa-solid fa-moon"></i>
+                    <p>Display accesssibility</p>
                 </div>
-                <div class="question-logo">
+                <div onclick="logOut()" class="log-logo">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <p>Log out</p>
                 </div>
             </div>
         </div>
