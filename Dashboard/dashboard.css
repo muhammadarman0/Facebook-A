@@ -429,3 +429,47 @@
     cursor: pointer;
     right: 15px;
 }
+
+.log-out-cont {
+    background-color: white;
+}
+
+.first-lineCont {
+    position: absolute;
+    right: 15px;
+    /* border: 1px solid black; */
+    width: 25%;
+    background-color: white;
+    border-radius: 10px;
+    top: 80px;
+    padding: 10px;
+}
+
+.profile-pic {
+    padding: 10px;
+    border-bottom: 2px solid rgb(189, 185, 185);
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.see-porifle {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.see-porifle>button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 550;
+    font-size: 14px;
+    opacity: 5;
+    background-color: #E2E5E9;
+    cursor: pointer;
+}
+
+.see-porifle>button:hover {
+    background-color: #cfd0d1;
+
+}
