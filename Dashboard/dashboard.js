@@ -174,12 +174,13 @@ getDataName()
 
 
 showLogOut.addEventListener("click", () => {
-    if (newOut.style.display === "none") {
-        newOut.style.display = "block"
-    } else {
+    if (newOut.style.display === "block") {
         newOut.style.display = "none"
+    } else {
+        newOut.style.display = "block"
     }
 })
+
 function logOut() {
     const logOutUser = localStorage.removeItem("currentUser")
     window.location.href = "../login/login.html"
@@ -402,7 +403,7 @@ const nameuser = () => {
     const name = document.getElementById("Nameuser")
     let getData = JSON.parse(localStorage.getItem("currentUser"))
     name.innerHTML = `${getData.name} ${getData.lastNaam}`
-    
+
 }
 
 nameuser()
