@@ -1,5 +1,7 @@
 let showLogOut = document.getElementById("show-log-out")
 let newOut = document.getElementById("log-out-show-click")
+let postData = JSON.parse(localStorage.getItem("postsVideos"))
+let btnSearch = document.getElementById("btnSearch")
 let ArrOfStories = [
     {
         storyFile: "https://picsum.photos/300/500?random=1",
@@ -229,6 +231,55 @@ const postStory = () => {
 }
 postStory()
 
+let postHTML = (post) => {
+    return `
+        <div class="post">
+                             <div class="post-header">
+                                 <div class="profile-content">
+                                     <div class="profile-pic">
+                                         <img src="${post.profilePic}" alt="">
+                                     </div>
+                                     <div class="post-user-detail">
+                                         <p id="name">${post.userName}</p>
+                                         <p>${post.uploadTime}</p>
+                                     </div>
+                                 </div>
+                                 <div class="post-icons">
+                                     <i class="fa-solid fa-ellipsis"></i>
+                                     <i class="fa-solid fa-xmark" onclick="re(this)"></i>
+                                 </div>
+                             </div>
+                             <div class="post-caption">
+                                 <p>${post.description}</p>
+                             </div>
+                             <div class="post-image">
+                                 <img src="${post.uploadVideo}" alt="">
+                             </div>
+                             <div class="post-reactions">
+                                 <div>
+                                     <i class="fa-solid fa-thumbs-up"></i>
+                                     <i class="fa-regular fa-face-grin-beam-sweat"></i>
+                                     <p>${post.reaction}</p>
+                                 </div>
+                                 <div>
+                                     <p>${post.comment} comments</p>
+                                     <p>${post.share} share</p>
+                                 </div>
+                             </div>
+                             <div class="post-footer">
+                                 <div>
+                                     <i class="fa-regular fa-thumbs-up"></i> Like
+                                 </div>
+                                 <div>
+                                     <i class="fa-regular fa-comment"></i> Comment
+                                 </div>
+                                 <div>
+                                     <i class="fa-regular fa-share-from-square"></i> Share
+                                 </div>
+                             </div>
+                         </div> 
+        `
+}
 
 
 // const uploadVideo = () => {
@@ -285,10 +336,21 @@ postStory()
 
 const postID = document.getElementById("post-container")
 
-const uploadVideo = () => {
-    const postWaleLog = JSON.parse(localStorage.getItem("postsVideos"))
-    const returnArr = postWaleLog?.map((post) => {
-        return `
+const uploadVideo = (filteRVale) => {
+    console.log(filteRVale);
+
+    if (filteRVale) {
+        let htmlPost = filteRVale.map((post) => postHTML(post))
+
+        postID.innerHTML = htmlPost.join("")
+
+        console.log("post mil gai", htmlPost);
+
+    } else {
+
+        const postWaleLog = JSON.parse(localStorage.getItem("postsVideos"))
+        const returnArr = postWaleLog?.map((post) => {
+            return `
         <div class="post">
                              <div class="post-header">
                                  <div class="profile-content">
@@ -335,8 +397,9 @@ const uploadVideo = () => {
                              </div>
                          </div> 
         `
-    })
-    postID.innerHTML = returnArr ? returnArr.join("") : "";
+        })
+        postID.innerHTML = returnArr ? returnArr.join("") : "";
+    }
 }
 
 uploadVideo()
@@ -408,3 +471,17 @@ const nameuser = () => {
 
 nameuser()
 
+const SeacrhInput = () => {
+    const searchValue = document.getElementById("searchValue")
+    let value = searchValue.value
+    let filteRVale = postData.filter((post) => post.description.includes(value))
+
+    uploadVideo(filteRVale)
+
+    searchValue.value = ""
+
+}
+
+btnSearch.addEventListener("click", () => {
+    SeacrhInput()
+})
